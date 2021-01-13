@@ -28,7 +28,7 @@ jobs:
         path: app/build/outputs/apk/playProd/debug/Signal-Android-play-prod-arm64-v8a*.apk
 
   test:
-    if: ${{ github.repository_owner == 'signalapp' }}
+    if: ${{ github.repository_owner == 'williamspacefire' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
