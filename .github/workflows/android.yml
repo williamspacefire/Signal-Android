@@ -21,7 +21,7 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew qa
     - name: Upload APK
-      if: ${{ github.repository_owner == 'signalapp' }}
+      if: ${{ github.repository_owner == 'williamspacefire' }}
       uses: actions/upload-artifact@v2
       with:
         name: Signal-Android-app
