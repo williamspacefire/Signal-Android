@@ -1487,7 +1487,7 @@ public class PushServiceSocket {
     return baseClient.newBuilder()
                      .connectTimeout(soTimeoutMillis, TimeUnit.MILLISECONDS)
                      .readTimeout(soTimeoutMillis, TimeUnit.MILLISECONDS)
-                     .retryOnConnectionFailure(automaticNetworkRetry)
+                     .retryOnConnectionFailure(true)
                      .build();
   }
 
