@@ -135,7 +135,6 @@ import javax.net.ssl.X509TrustManager;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.ConnectionPool;
 import okhttp3.ConnectionSpec;
 import okhttp3.Credentials;
 import okhttp3.Dns;
@@ -1798,8 +1797,6 @@ public class PushServiceSocket {
       builder.sslSocketFactory(new Tls12SocketFactory(context.getSocketFactory()), (X509TrustManager)trustManagers[0])
              .connectionSpecs(url.getConnectionSpecs().or(Util.immutableList(ConnectionSpec.RESTRICTED_TLS)))
              .build();
-
-      builder.connectionPool(new ConnectionPool(5, 1, TimeUnit.MINUTES));
 
       for (Interceptor interceptor : interceptors) {
         builder.addInterceptor(interceptor);
